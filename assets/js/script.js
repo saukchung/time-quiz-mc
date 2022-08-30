@@ -18,6 +18,22 @@ var qBank = [
 ];
 
 // FUNCTIONS =========================================
+function renderQuestion(i) {
+    const questionUl = document.createElement("ul");
+    console.log(qBank);
+    questionUl.textContent = qBank[i].question;
+
+    for (j = 0; j < qBank[i].choices.length; j++) {
+        const choiceLi = document.createElement("li");
+        choiceLi.textContent = qBank[i].choices[j];
+        questionUl.appendChild(choiceLi);
+    };
+    
+
+    mainEl.appendChild(questionUl);
+}
+
+
 function startGame() {
     var timerInterval = setInterval(function() {
         timeLeft--;
@@ -33,6 +49,7 @@ buttonEl.addEventListener("click", function(event) {
     buttonEl.setAttribute("style", "display: none");
     timerEl.textContent = timeLeft;
     startGame();
+    renderQuestion(0);
 })
 
 // INITIALIZATION =========================================
