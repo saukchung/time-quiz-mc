@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-height: 10 px;
+}
+
+nav p {
+    display: inline-block;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+    padding: 200px 0px;
+    border: black dashed 2px;
+    margin: 10px 0px;
+    border-radius: 10%;
+
+}
+
+.highscoreBtn {
+    background-color: aquamarine;
+    border-radius: 50%;
+    color: grey;
+}
